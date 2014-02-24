@@ -1,0 +1,66 @@
+/* 
+css document
+Default styles for site 
+Developer: Matt Bentley
+Email: matt.bentley@guardian.co.uk
+*/
+
+/* Palette
+===========================================================================================================================
+=========================================================================================================================== */
+
+/* 
+
+
+*/
+
+/* Global Reset: v0.1 
+===========================================================================================================================
+=========================================================================================================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, 
+tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	}
+
+ol, ul {
+	list-style: none;
+	list-style-position:outside;
+	list-style-image:none;
+	}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+	}
+
+blockquote, q {
+	quotes: "" "";
+	}
+
+table {
+	border-collapse: collapse; 	/* tables still need 'cellspacing="0"' in the markup */
+	border-spacing: 0;
+	}
+
+header, nav, footer, section, article
+{
+    display: block;
+}
+
+/* Base Typography
+===========================================================================================================================
+===========================================================================================================================*/
+
+
+
+/* Structural Elements
+===========================================================================================================================
+===========================================================================================================================*/
+
+ 
