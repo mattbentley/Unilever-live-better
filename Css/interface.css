@@ -5,62 +5,172 @@ Developer: Matt Bentley
 Email: matt.bentley@guardian.co.uk
 */
 
-/* Palette
-===========================================================================================================================
-=========================================================================================================================== */
-
-/* 
-
-
+/*
+    **NOTE
+    Prefix all styles with ULB_ to avoid classes with main guardian stylesheets
+    
 */
 
-/* Global Reset: v0.1 
-===========================================================================================================================
-=========================================================================================================================== */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
-font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, 
-tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	}
-
-ol, ul {
-	list-style: none;
-	list-style-position:outside;
-	list-style-image:none;
-	}
-
-blockquote:before, blockquote:after, q:before, q:after {
-	content: "";
-	}
-
-blockquote, q {
-	quotes: "" "";
-	}
-
-table {
-	border-collapse: collapse; 	/* tables still need 'cellspacing="0"' in the markup */
-	border-spacing: 0;
-	}
-
-header, nav, footer, section, article
-{
-    display: block;
+#ULB_body {
+    margin: 0;
 }
+
 
 /* Base Typography
 ===========================================================================================================================
 ===========================================================================================================================*/
 
+.ULB_view-animate h1 {
+    width: 264px;
+    height: 69px;
+    margin: 0;
+    text-indent: -9999px;   
+    background: url("../Images/livebetter-logo.png") no-repeat 0 0;
+}
 
+.ULB_view-animate h2 {
+    font-size: 71px;
+    font-weight: bold;
+    line-height: 75px;
+    margin: 10px 0;
+    color: #009600;
+    text-transform: uppercase; 
+    }
+    .ULB_view-animate h2 span {
+        font-size: 97px;
+        color: #333333;
+    }
+
+.ULB_view-animate p {
+    font-family: georgia,serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 20px 0 30px;
+}
+
+.ULB_view-animate button {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 45px;
+    border: 0;
+    background: #009600;
+    color: #fff;
+    font-size: 25px;
+    font-family: georgia,serif;
+    cursor: pointer;
+}
 
 /* Structural Elements
 ===========================================================================================================================
 ===========================================================================================================================*/
 
+/* Content
+===========================================================================================================================
+===========================================================================================================================*/
+
+#ULB_logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 58px;
+    height: 75px;
+    text-indent: -9999px;
+    background: url("../Images/unilever-logo.png") no-repeat 0 0;
+}
+
+#ULB_home {
+    height: 630px;
+    background: url("../Images/home-bg.png") no-repeat bottom left;
+}
+
+
+/* View transitions
+===========================================================================================================================
+===========================================================================================================================*/
+
+.ULB_view-animate-container {
+    position: relative;
+    height: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
  
+.ULB_view-animate {
+    width: 100%;
+    display: block;    
+}
+
+.ULB_view-animate.ng-enter, .ULB_view-animate.ng-leave {
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.ULB_view-animate.ng-enter {
+    z-index: 100;
+    opacity: 0;
+}
+.ULB_view-animate.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+.ULB_view-animate.ng-leave {
+    z-index: 101;
+    opacity: 1;
+}
+.ULB_view-animate.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+ 
+/* Responsive layout
+===========================================================================================================================
+===========================================================================================================================*/
+
+/* Desktop and landscape tablet */
+@media screen and (min-width: 940px) {
+    .ULB_view-animate-container {
+        height: 775px;
+    }
+}
+
+/* Tablet in portrait */
+@media screen and (min-width: 768px) and (max-width: 940px) and (orientation: portrait){
+    .ULB_view-animate-container {
+        height: 775px;
+    }
+}
+
+/* Small tablet landscape */
+@media screen and (min-width: 600px) and (max-width: 940px) and (orientation: landscape) {
+    .ULB_view-animate-container {
+        height: 775px;
+    }
+}
+
+/* Small tablet portrate */
+@media screen and (min-width: 480px) and (max-width: 768px) and (orientation: portrait) {
+    .ULB_view-animate-container {
+        height: 775px;
+    }
+}
+
+/* Mobile landscape */
+@media screen and (min-width: 320px) and (max-width: 600px) and (orientation: landscape) {
+    .ULB_view-animate-container {
+        height: 480px;
+    }
+}
+
+/* Mobile portrait */
+@media screen and (min-width: 320px) and (max-width: 480px)  and (orientation: portrait) {
+    .ULB_view-animate-container {
+        height: 480px;
+    }
+}

@@ -6,10 +6,11 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Unilever Live Better</title>
+        <link rel="stylesheet" type="text/css" href="Css/base-typography.css" />
 		<link rel="stylesheet" type="text/css" href="Css/interface.css" />
         <script src="Scripts/Libraries/jquery-1.10.2.min.js" type="text/javascript"></script>
         <script src="Scripts/Libraries/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-        <script src="Scripts/Libraries/jquery.ui.touch-punch.in.js" type="text/javascript"></script>
+        <script src="Scripts/Libraries/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
         <script src="Scripts/Libraries/angular.min.js" type="text/javascript"></script>
         <script src="Scripts/Libraries/angular-route.min.js" type="text/javascript"></script>
         <script src="Scripts/Libraries/angular-touch.min.js" type="text/javascript"></script>
@@ -18,9 +19,9 @@
         <script src="Scripts/ULB.Controllers.js" type="text/javascript"></script>
         <script src="Scripts/ULB.Directives.js?v=0.3" type="text/javascript"></script>
 	</head>
-	<body>
-        <div ng-app="ulb.app" ng-controller="ApplicationController" class="view-animate-container">
-            <div ng-view id="ng-view" ng-class="viewTransition" class="view-animate"></div>
+	<body id="ULB_body">
+        <div ng-app="ulb.app" ng-controller="ApplicationController" class="ULB_view-animate-container">
+            <div ng-view id="ng-view" class="ULB_view-animate"></div>
         </div>
 	</body>
 </html>
